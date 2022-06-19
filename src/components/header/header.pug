@@ -1,4 +1,16 @@
+-nav = ["Консультации", "Услуги", "Тренинги", "Блог"]
+-icons = ["facebook", "whatsapp", "telegram"]
 
 header
     .container
-        img(src="build/images/logo.svg" alt="logo")
+        .row
+            .col-xl-4
+                img(src="./assets/images/logo.svg" alt="logo")
+            nav.col-xl-8
+                each item in nav
+                    .nav__item= item
+                .icons
+                    each icon in icons
+                        a.icon
+                            img(src=`./assets/images/${icon}.svg`)
+

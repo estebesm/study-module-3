@@ -1,6 +1,46 @@
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #282C37;
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../assets/fonts/lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url("../assets/fonts/lato/Lato-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-700';
+  src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat-400';
+  src: url("../assets/fonts/montserrat/Montserrat-Regular.ttf");
+}
+
+.container{
+  max-width: 1200px;
+}
+button{
+  border: none;
+}
+button.primary{
+  background-color: #47CF34;
+  color: white;
+  font-family: Montserrat-700, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 0;
+  border-radius: 8px;
+  text-transform: uppercase;
 }

@@ -3,8 +3,62 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet")
         title index
     body
+        -
+            features = [
+                "Как найти точки роста и определить цели?",
+                "Как увеличить прибыль, управляя ценами?",
+                "Как избежать проблем на старте нового бизнеса?",
+                "Как не попасть в \"черную дыру\" затрат на продвижение?"
+            ]
+
+            decidions = [
+                {
+                    text: "Разрабатываем маркетинг-план: дорожная карта достижения целей",
+                    img: "report"
+                },
+                {
+                    text: "Повышаем эффективность продвижения: аудит существующей модели",
+                    img: "idea"
+                },
+                {
+                    text: "Находим скрытую прибыль: анализ модели ценообразования",
+                    img: "search"
+                },
+                {
+                    text: "Запускаем новый проект: start-up маркетинг",
+                    img: "startup"
+                }
+            ]
+
         include ../../components/header/header
-        h1 Main
-        a(href="./services.html") Services
+        section.banner
+            .container
+                img(src="./assets/images/backgrounds/banner.svg").banner-background
+                .title
+                    h1 Создаем решения
+                    h2 Для роста бизнеса
+                    p.col-xl-5 На основе анализа данных с алгоритмами реализации
+                    button.primary Обсудить проблему
+                .features
+                    .row
+                        each item in features
+                            .col-xl-1
+                            .col-xl-4.item
+                                .col-xl-3
+                                    include ../../assets/images/cube.svg
+                                .col-xl-9= item
+                            .col-xl-1
+                h3 Услуги
+        .decidions
+            .container
+                .grid
+                    each box, index in decidions
+                        div(class=`box box-${index+1}`)
+                            img(src=`./assets/images/decidions/${box.img}.svg`)
+                            p=box.text
+        include ../../components/footer/footer

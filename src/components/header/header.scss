@@ -1,4 +1,36 @@
 header{
-  background-color: aqua;
-  color: yellow;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0;
+  .container {
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      .nav__item{
+        font-size: 14px;
+        line-height: 16.8px;
+        font-family: Lato-Medium, 'sans-serif';
+      }
+      .nav__item:first-child{
+        font-weight: bold;
+      }
+
+      .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon{
+          margin-left: 24px;
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }

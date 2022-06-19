@@ -4,8 +4,11 @@ const pug = require('./webpack/pug');
 const devServer = require('./webpack/devServer');
 const sass = require('./webpack/sass');
 const images = require('./webpack/images');
+const fonts = require('./webpack/fonts');
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin")
+
 const fs = require("fs");
 
 const PATHS = {
@@ -42,11 +45,17 @@ const common = merge([
             filename: "[name].js"
         },
         plugins: [
+            new CopyPlugin({
+                patterns: [
+                    { from: "src/assets", to: "assets" }
+                ],
+            }),
             ...res
         ],
     },
     pug(),
     sass(),
+    fonts(),
     images()
 ]);
 
