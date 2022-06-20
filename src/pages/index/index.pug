@@ -39,20 +39,22 @@ html(lang="en")
         section.banner
             .container
                 img(src="./assets/images/backgrounds/banner.svg").banner-background
+                img(src="./assets/images/backgrounds/banner-ipad.svg").banner-ipad-background
                 .title
                     h1 Создаем решения
                     h2 Для роста бизнеса
                     p.col-xl-5 На основе анализа данных с алгоритмами реализации
                     button.primary Обсудить проблему
                 .features
-                    .row
+                    .row.features-row
                         each item in features
-                            .col-xl-1
-                            .col-xl-4.item
-                                .col-xl-3
-                                    include ../../assets/images/cube.svg
-                                .col-xl-9= item
-                            .col-xl-1
+                            .col-xl-1.col-lg-0.col-md-0
+                            .col-xl-4.col-lg-6.col-md-6.item
+                                .row.g-4
+                                    .col-xl-3.col-lg-2.col-md-2
+                                        include ../../assets/images/cube.svg
+                                    .col-xl-9.col-lg-10.col-md-10.text= item
+                            .col-xl-1.col-lg-0.col-md-0
                 h3 Услуги
         .decidions
             .container
