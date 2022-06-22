@@ -1,0 +1,74 @@
+.trainings__banner{
+  h1{
+    font-family: Montserrat-700, sans-serif;
+    font-size: 44px;
+    line-height: 53.64px;
+    margin: 40px 0 24px;
+  }
+  p{
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  .primary-button{
+    background-color: #47CF34;
+    color: white;
+    padding: 14px 18px 12px 88px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 24px;
+    margin-left: 40px;
+    font-family: Montserrat-700, sans-serif;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-transform: uppercase;
+    svg{
+      margin-left: 43px;
+    }
+  }
+}
+
+.trainings__program{
+  padding: 160px 0 90px;
+  h1{
+    font-family: Montserrat-700, sans-serif;
+    font-size: 30px;
+    line-height: 36.57px;
+    margin-bottom: 45px;
+  }
+  h2{
+    margin-bottom: 10px;
+    line-height: 24.38px;
+    font-size: 20px;
+    font-family: Montserrat-700, sans-serif;
+  }
+  .secondary__list{
+    padding-left: 70px;
+    margin-bottom: 37px;
+    li{
+      .description__item{
+        font-size: 17px;
+        font-family: Lato-Regular, sans-serif;
+        line-height: 20.4px;
+      }
+    }
+  }
+  .bonuses{
+    margin-top: -20px;
+    h2{
+      line-height: 24.38px;
+      font-size: 20px;
+      font-family: Montserrat-700, sans-serif;
+      margin-bottom: 26px;
+      padding-top: 20px;
+    }
+    p{
+      font-size: 17px;
+      line-height: 20.4px;
+      padding-left: 42px;
+      padding-bottom: 3px;
+    }
+  }
+  .benefits{
+    margin-top: 40px;
+  }
+}

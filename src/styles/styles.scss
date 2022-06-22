@@ -1,6 +1,98 @@
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #282C37;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../assets/fonts/lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url("../assets/fonts/lato/Lato-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url("../assets/fonts/lato/Lato-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-700';
+  src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat-400';
+  src: url("../assets/fonts/montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-400';
+  src: url("../assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+button{
+  border: none;
+  background-color: inherit;
+  display: block;
+}
+button.primary{
+  background-color: #47CF34;
+  color: white;
+  font-family: Montserrat-700, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.container{
+  max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .container{
+    max-width: 960px;
+  }
+  .col-lg-0{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .container{
+    max-width: 720px;
+  }
+  .col-lg-0{
+    display: block;
+  }
+  .col-md-0{
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .container{
+    max-width: 540px;
+  }
+  .col-md-0{
+    display: block;
+  }
+  .col-sm-0{
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .container{
+
+  }
 }

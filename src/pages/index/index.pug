@@ -3,8 +3,71 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet")
         title index
     body
+        -
+            features = [
+                "Как найти точки роста и определить цели?",
+                "Как увеличить прибыль, управляя ценами?",
+                "Как избежать проблем на старте нового бизнеса?",
+                "Как не попасть в \"черную дыру\" затрат на продвижение?"
+            ]
+
+            decidions = [
+                {
+                    text: "Разрабатываем маркетинг-план: дорожная карта достижения целей",
+                    img: "report"
+                },
+                {
+                    text: "Повышаем эффективность продвижения: аудит существующей модели",
+                    img: "idea"
+                },
+                {
+                    text: "Находим скрытую прибыль: анализ модели ценообразования",
+                    img: "search"
+                },
+                {
+                    text: "Запускаем новый проект: start-up маркетинг",
+                    img: "startup"
+                }
+            ]
+
         include ../../components/header/header
-        h1 Main
-        a(href="./services.html") Services
+        section.banner
+            .container
+                img(src="../../assets/images/backgrounds/vector-top.svg" class="background vector-top")
+                img(src="../../assets/images/backgrounds/vector-top-ipad.svg" class="background vector-top-ipad")
+                img(src="../../assets/images/backgrounds/banner-image.svg" class="background banner-image")
+                img(src="../../assets/images/backgrounds/header-polygons.svg" class="background header-polygons")
+                .title
+                    h1 Создаем решения
+                    h2 Для роста бизнеса
+                    p.col-xl-5.col-lg-6 На основе анализа данных с алгоритмами реализации
+                    button.primary Обсудить проблему
+                img(src="../../assets/images/backgrounds/vector-middle.svg" class="background vector-middle")
+                img(src="../../assets/images/backgrounds/vector-middle-ipad.svg" class="background vector-middle-ipad")
+                img(src="../../assets/images/backgrounds/arrows.svg" class="background arrows")
+                .features
+                    .row.features-row
+                        each item in features
+                            .col-xl-1.col-lg-0.col-md-0
+                            .col-xl-4.col-lg-6.col-md-6.col-12.item
+                                .row.g-4
+                                    .col-xl-3.col-lg-2.col-md-2.col-2.features__cube
+                                        include ../../assets/images/cube.svg
+                                    .col-xl-9.col-lg-10.col-md-10.col-8.text= item
+                            .col-xl-1.col-lg-0.col-md-0
+                img(src="../../assets/images/backgrounds/vector-bottom.svg" class="background vector-bottom")
+                img(src="../../assets/images/backgrounds/vector-bottom-ipad.svg" class="background vector-bottom-ipad")
+                h3 Услуги
+        .decidions#services
+            .container
+                .grid
+                    each box, index in decidions
+                        div(class=`box box-${index+1}`)
+                            img(src=`./assets/images/decidions/${box.img}.svg`)
+                            p=box.text
+        include ../../components/footer/footer

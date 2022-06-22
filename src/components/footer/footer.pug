@@ -1,0 +1,12 @@
+-icons = ["facebook", "whatsapp", "telegram"]
+
+footer
+    .container
+        .row
+            .col-xl-6.col-md-6.col-sm-12.col-12
+                p Все права защищены ©
+            .col-xl-6.col-md-6.col-sm-12.col-12
+                .icons
+                    each icon in icons
+                        a.icon
+                            img(src=`./assets/images/footer/${icon}.svg`)

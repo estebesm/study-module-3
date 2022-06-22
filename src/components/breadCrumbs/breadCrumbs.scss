@@ -1,0 +1,19 @@
+.breadCrumbs{
+  margin-top: 71px;
+  .breadcrumb-item{
+    font-size: 14px;
+    line-height: 16.41px;
+    font-family: Roboto, sans-serif;
+    padding-left: 16px;
+    &:first-child{
+      padding-left: 0;
+    }
+    &::before{
+      padding-right: 16px;
+    }
+    a{
+      font-size: 14px;
+      line-height: 16.41px;
+    }
+  }
+}

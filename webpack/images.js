@@ -7,7 +7,7 @@ module.exports = function (){
                     loader: 'file-loader',
                     options: {
                         name: 'images/[name].[ext]'
-                    },
+                    }
                 },
             ],
         },

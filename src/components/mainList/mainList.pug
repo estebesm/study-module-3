@@ -1,0 +1,8 @@
+
+mixin mainList(list)
+    .col-xl-6.col-xxl-6.col-lg-6.main__list
+        each item in list.items
+            .row.item
+                .col-xl-2.col-xxl-2.col-lg-2.cube-wrapper
+                    img(src="../../assets/images/cube.svg" class="cube")
+                .col-xl-10.col-xxl-10.col-lg-10.text(class=list.nowrap)= item

@@ -1,0 +1,26 @@
+.main__list{
+  padding: 16px 0;
+  .item{
+    margin: 12px 0;
+    padding: 0;
+    .cube{
+      width: 23px;
+      height: 25px;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      left: 5px;
+      bottom: 3px;
+    }
+    .text{
+      padding-left: 7px;
+      padding-right: 0;
+      font-size: 17px;
+      line-height: 20.4px;
+      font-family: Lato-Regular, sans-serif;
+    }
+    .nowrap{
+      white-space: nowrap;
+    }
+  }
+}
