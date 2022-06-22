@@ -1,4 +1,43 @@
+-
+    nav = [
+        {
+            name: "Консультации",
+            link: "./trainingMarketing.html"
+        },
+        {
+            name: "Услуги",
+            link: "./services.html"
+        },
+        {
+            name: "Тренинги",
+            link: "./trainings.html"
+        },
+        {
+            name:"Блог",
+            link: "#"
+        }
+    ]
+-icons = ["facebook", "whatsapp", "telegram"]
 
 header
     .container
-        img(src="build/images/logo.svg" alt="logo")
+        .row
+            .col-xl-4.col-lg-3.col-md-6.col-sm-6.col-6
+                a(href="./index.html")
+                    img(src="./assets/images/logo.svg" alt="logo" class="logo")
+            .col-lg-0.col-md-6.col-sm-6.col-6.button__wrapper
+                button(type="button")
+                    img(src="./assets/images/header/burger-menu.svg" alt="burger")
+            nav.col-xl-8.col-lg-9
+                button.close
+                    img(src="./assets/images/header/close.svg" alt="close")
+                a.cube
+                    img(src="./assets/images/header/cube.svg" alt="cube")
+                each item in nav
+                    .nav__item
+                        a(href=item.link)= item.name
+                .icons
+                    each icon in icons
+                        a.icon
+                            img(src=`./assets/images/${icon}.svg`)
+

@@ -1,4 +1,116 @@
 header{
-  background-color: aqua;
-  color: yellow;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0;
+  box-shadow: 0 2px 8px 0 #323B500D;
+  .container {
+    .button__wrapper{
+      display: none;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      .close, .cube{
+        display: none;
+      }
+      .nav__item{
+        font-size: 14px;
+        line-height: 16.8px;
+        font-family: Lato-Medium, 'sans-serif';
+      }
+      .nav__item:first-child{
+        font-weight: bold;
+      }
+
+      .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon{
+          margin-left: 24px;
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .col-lg-0{
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .col-lg-0{
+    display: block;
+  }
+  header{
+    height: 76px;
+    .container {
+      padding: 0 8.5px;
+      .button__wrapper{
+        display: flex;
+        justify-content: end;
+      }
+      nav {
+        display: none;
+      }
+      nav.active{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .close{
+          display: block;
+          position: absolute;
+          left: 22px;
+          top: 18px;
+        }
+        .cube{
+          display: block;
+          margin: -3px 0 80px;
+        }
+        .nav__item{
+          margin-bottom: 45px;
+          font-size: 16px;
+          line-height: 19.2px;
+          letter-spacing: .3px;
+        }
+        .icons{
+          margin-top: 70px;
+          width: 152px;
+          justify-content: space-between;
+          .icon{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  header{
+    height: 70px;
+    .container {
+      padding: 0 15px;
+      .logo{
+        margin-top: 4px;
+      }
+    }
+  }
 }
