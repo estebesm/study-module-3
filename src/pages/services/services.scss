@@ -1,3 +1,26 @@
-h1{
-  color: red
+.services__main *{
+    font-family: Roboto-400, sans-serif;
+    line-height: 19.92px;
+    font-size: 17px;
+}
+.services__main{
+  h1{
+    font-size: 44px;
+    line-height: 53.64px;
+    font-family: Montserrat-700, sans-serif;
+    margin-top: 41px;
+  }
+}
+
+.services__description{
+  h1{
+    font-size: 30px;
+    line-height: 36.57px;
+    font-family: Montserrat-700, sans-serif;
+    margin: 38px 0 38px;
+  }
+  p{
+    padding: 0 18px;
+    margin-bottom: 23px;
+  }
 }

@@ -38,7 +38,9 @@ const common = merge([
         mode: "production",
         entry: {
             "index": PATHS.source + "/pages/index/index.js",
-            "services": PATHS.source + "/pages/services/services.js"
+            "services": PATHS.source + "/pages/services/services.js",
+            "trainings": PATHS.source + "/pages/trainings/trainings.js",
+            "trainingMarketing": PATHS.source + "/pages/trainingMarketing/trainingMarketing.js"
         },
         output: {
             path: PATHS.build,

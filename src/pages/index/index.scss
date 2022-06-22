@@ -1,22 +1,36 @@
 .banner{
   width: 100%;
-  height: 1000px;
   margin-top: 94px;
   .container {
     position: relative;
-    .banner-background {
-      position: absolute;
-      top: -3px;
-      width: calc(100% - 24px);
+    .background{
+      display: block;
+      position: relative;
       z-index: -1;
     }
-    .banner-ipad-background{
+    .vector-top{
+      display: block;
+      margin: 0 auto;
+      right: 36px;
+    }
+    .vector-top-ipad, .vector-middle-ipad{
       display: none;
     }
+    .header-polygons{
+      position: absolute;
+      left: 13px;
+      top: 38px;
+    }
+    .banner-image{
+      position: absolute;
+      right: 14px;
+      top: 9px;
+    }
     .title {
-      padding: 120px 30px;
+      padding: 23px 30px 0;
       h1 {
         text-transform: uppercase;
+        text-align: center;
         font-family: 'Montserrat-700', sans-serif;
         font-size: 44px;
         line-height: 53.64px;
@@ -37,28 +51,35 @@
         line-height: 26.4px;
       }
       button.primary{
-        margin-top: 33px;
+        margin-top: 30px;
         width: 264px;
       }
     }
-
+    .vector-middle{
+      margin: 27px auto 37px;
+      right: 57px;
+    }
+    .arrows{
+      display: none;
+    }
     .features{
-      margin-top: 146px;
+      margin-top: 0;
       .item{
         font-size: 18px;
         line-height: 22px;
+        padding-right: 10px;
         margin-bottom: 76px;
-        .text{
-          display: flex;
-          align-items: center;
-          padding: 0 5px 0 13px;
-        }
       }
     }
-
+    .vector-bottom-ipad{
+      display: none;
+    }
+    .vector-bottom{
+      top: -40px;
+    }
     h3{
       position: absolute;
-      top: calc(100% + 86px);
+      bottom: 64px;
       left: 70px;
       font-family: Montserrat-700, sans-serif;
       font-size: 30px;
@@ -69,7 +90,7 @@
 }
 
 .decidions{
-  margin-top: 77px;
+  margin-top: 10px;
   .container{
     .grid{
       display: grid;
@@ -131,53 +152,88 @@
 
 @media (max-width: 1200px){
   .banner{
-    height: 800px;
+    margin-top: 0;
     .container{
+      .vector-top{
+        width: 500px;
+        top: 60px;
+        right: 60px;
+      }
+      .header-polygons{
+        top: 40px;
+        width: 100px;
+      }
+      .banner-image{
+        width: 400px;
+        margin-top: 50px;
+      }
       .title{
-        padding: 80px 0 160px;
+        padding: 80px 0 10px;
+      }
+      .vector-middle{
+        width: 500px;
+        top: 0;
+        right: 60px;
       }
       .features{
         margin-top: 30px;
         .item{
           .text{
-            padding: 0 10px 0 0;
+            display: flex;
+            align-items: center;
+            padding-left: 0;
           }
         }
       }
+      .vector-bottom{
+        width: 660px;
+      }
       h3{
-        top: calc(100% + 35px);
+        bottom: 60px;
       }
     }
   }
 }
+
 @media (max-width: 991px) {
   .banner{
-    height: 616px;
     margin-top: 0;
     .container {
       padding: 0 15px;
-      .banner-background {
+      .vector-top, .vector-middle{
         display: none;
       }
-      .banner-ipad-background{
+      .vector-top-ipad{
         display: block;
-        position: absolute;
-        top: 24px;
-        right: 19px;
-        z-index: -1;
+        width: 375px;
+        margin: 30px auto 0;
+        left: 5px;
+      }
+      .header-polygons{
+        top: -5px;
+        left: 20px;
+        width: 139px;
+        height: 152px;
+      }
+      .banner-image{
+        top: -37px;
+        right: 20px;
+        width: 259px;
+        height: 251px;
       }
       .title {
-        padding: 120px 30px 96px;
+        padding: 10px 30px;
 
         h1 {
           font-size: 28px;
           line-height: 34.13px;
+          padding-bottom: 5px;
         }
 
         h2 {
           font-size: 18px;
           line-height: 22px;
-          margin: 0 0 8px;
+          margin: 0 0 5px;
         }
 
         p {
@@ -190,42 +246,47 @@
           margin-top: 15px;
         }
       }
-
+      .vector-middle-ipad{
+        display: block;
+        margin: 5px auto 20px;
+        right: 15px;
+      }
       .features{
         margin-top: 0;
-        .features-row{
-          padding: 0 20px;
-          position: relative;
-          left: 10px;
-        }
+        padding: 0 15px 0 30px;
         .col-md-0{
           display: none;
         }
         .item{
           margin: 0 0 49px;
-          padding-right: 30px;
+          padding-right: 15px;
           .text{
-            padding: 0 0 0 32px;
+            padding: 0 15px 0 32px;
             position: relative;
             right: 9px;
+            font-size: 16px;
+            line-height: 19.2px;
           }
         }
-        .item *{
-          font-size: 16px;
-          line-height: 19.2px;
-        }
+      }
+      .vector-bottom{
+        display: none;
+      }
+      .vector-bottom-ipad{
+        display: block;
+        margin-left: -10px;
+        margin-top: -19px;
       }
 
       h3{
-        top: calc(100% + 60px);
+        bottom: 17px;
         left: 43px;
       }
     }
   }
 
   .decidions {
-    margin-top: 77px;
-
+    margin-top: 19px;
     .container {
       .grid {
         grid-template-columns: 6fr 6fr;
@@ -286,37 +347,48 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .banner{
     .container {
-      .banner-background {
+      .vector-top-ipad, .vector-middle-ipad, .vector-bottom-ipad, .header-polygons{
+        display: none;
+      }
+      .banner-image{
+        width: 239px;
+        height: 232px;
+        position: static;
+        top: 0;
+        right: 0;
+        margin: 45px auto 31px;
       }
       .title {
-        h1 {
-
-        }
-
-        h2 {
-
-        }
-
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p {
-
+          text-align: center;
+          margin-top: 12px;
         }
         button.primary{
-
+          margin-top: 25px;
         }
+      }
+      .arrows{
+        display: block;
+        margin: 58px auto 0;
       }
 
       .features{
-
+        margin: 50px 0 20px;
         .item{
 
         }
       }
 
       h3{
-
+        position: static;
+        text-align: center;
       }
     }
   }
@@ -371,6 +443,118 @@
           img{
             width: 80px;
             height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .banner{
+    .container {
+      .vector-top-ipad, .vector-middle-ipad, .vector-bottom-ipad, .header-polygons{
+        display: none;
+      }
+      .banner-image{
+        width: 239px;
+        height: 232px;
+        position: static;
+        top: 0;
+        right: 0;
+        margin: 45px auto 31px;
+      }
+      .title {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          text-align: center;
+          margin-top: 12px;
+        }
+        button.primary{
+          margin-top: 25px;
+        }
+      }
+      .arrows{
+        display: block;
+        margin: 58px auto 0;
+      }
+      .features{
+        margin-top: 40px;
+        padding: 30px;
+        position: relative;
+        left: 12px;
+        .item{
+          padding: 0;
+          margin: 34px 0;
+          .row{
+            align-items: start;
+          }
+          .features__cube{
+            padding: 0;
+            margin-top: 5px;
+          }
+          .text{
+            font-size: 18px;
+            line-height: 21.6px;
+            padding: 0 0 0 3px;
+            position: static;
+            margin-top: 0;
+          }
+        }
+      }
+      h3{
+        position: static;
+        text-align: center;
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .decidions{
+    .container{
+      padding: 0 15px;
+      .grid{
+        grid-template-columns: 12fr;
+        grid-template-rows: 249px 249px 249px 249px;
+        .box{
+          p{
+
+          }
+          img{
+
+          }
+        }
+        .box-1 {
+          p {
+            width: 253px;
+          }
+        }
+
+        .box-2 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          p {
+            width: 253px;
+            margin: 0;
+          }
+        }
+
+        .box-3 {
+          p {
+            width: 253px;
+          }
+
+          img {
+            padding-left: 19px;
+          }
+        }
+
+        .box-4 {
+          p {
+            width: 253px;
           }
         }
       }

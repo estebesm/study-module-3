@@ -8,7 +8,7 @@ footer{
   p{
     margin: 0;
     padding-top: 3px;
-    color: white;
+    color: #9FA7B0;
     font-size: 14px;
     line-height: 16.8px;
     letter-spacing: .3px;
@@ -37,6 +37,25 @@ footer{
     }
     .icons{
       margin-right: -3px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  footer{
+    height: 120px;
+    .row{
+      flex-direction: column-reverse;
+    }
+    p{
+      margin: 22px 0 0 ;
+      text-align: center;
+    }
+    .icons{
+      justify-content: center;
+      .icon{
+        margin: 5px 20px 0;
+      }
     }
   }
 }

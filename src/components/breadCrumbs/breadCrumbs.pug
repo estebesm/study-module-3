@@ -1,0 +1,19 @@
+
+//crumbs = [
+//    {
+//        name: string,
+//        url: string
+//    },
+//    ...
+//]
+
+
+mixin breadCrumbs(crumbs)
+    nav(aria-label="breadcrumb" class="breadCrumbs")
+        ol(class="breadcrumb")
+            each crumb, index in crumbs
+                if(index !== crumbs.length-1)
+                    li(class="breadcrumb-item")
+                        a(href=crumb.url)= crumb.name
+                else
+                    li(class="breadcrumb-item active" aria-current="page")= crumb.name
