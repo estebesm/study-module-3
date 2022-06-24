@@ -19,19 +19,23 @@ html(lang="en")
             decidions = [
                 {
                     text: "Разрабатываем маркетинг-план: дорожная карта достижения целей",
-                    img: "report"
+                    img: "report",
+                    link: "./services.html"
                 },
                 {
                     text: "Повышаем эффективность продвижения: аудит существующей модели",
-                    img: "idea"
+                    img: "idea",
+                    link: "./services.html"
                 },
                 {
                     text: "Находим скрытую прибыль: анализ модели ценообразования",
-                    img: "search"
+                    img: "search",
+                    link: "./services.html"
                 },
                 {
                     text: "Запускаем новый проект: start-up маркетинг",
-                    img: "startup"
+                    img: "startup",
+                    link: "./services.html"
                 }
             ]
 
@@ -68,7 +72,7 @@ html(lang="en")
             .container
                 .grid
                     each box, index in decidions
-                        div(class=`box box-${index+1}`)
+                        a(class=`box box-${index+1}` href=box.link)
                             img(src=`./assets/images/decidions/${box.img}.svg` alt="box")
                             p=box.text
         include ../../components/footer/footer
