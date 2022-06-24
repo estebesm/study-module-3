@@ -1,4 +1,4 @@
-import '../../components/consultation/consultation.scss'
+import './consultation.scss'
 
 const labels = document.querySelectorAll(".consultation form label")
 

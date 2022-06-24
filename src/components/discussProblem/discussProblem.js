@@ -1,5 +1,3 @@
-import "./discussProblem.scss"
-
 const openButton = document.getElementById("discuss-problem-button")
 const modal = document.getElementById("discussProblem")
 const dialog = document.getElementById("discussProblemDialog")
@@ -9,7 +7,6 @@ const successMessage = document.querySelector(".modal__wrapper .dialog .success-
 const submitButton = document.getElementById("discussSubmit")
 
 const labels = document.querySelectorAll(".modal__wrapper .dialog form label")
-
 
 const getInputOfLabel = label => {
     return Array

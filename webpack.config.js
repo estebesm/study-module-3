@@ -29,9 +29,9 @@ const res = [];
 
 PAGES.forEach(page => page.filenames.forEach(filename => {
     res.push( new HtmlWebpackPlugin({
-        template: `${page.path}/${filename}`,
         chunks: [filename.substring(0, filename.length-4)],
-        filename: `${filename.replace(/\.pug/, '.html')}`
+        filename: `${filename.replace(/\.pug/, '.html')}`,
+        template: `${page.path}/${filename}`
     }));
 }));
 
