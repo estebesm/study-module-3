@@ -5,13 +5,13 @@
             button.close#closeDiscuss
                 img(src="./assets/images/header/close.svg" alt="close")
             h1 Оставьте заявку
-            form
-                label
-                    input(placeholder="Ваше имя").input
-                label
-                    input(placeholder="Email").input
-                label
-                    textarea(placeholder="Пожалуйста опишите вашу проблему").input
+            form#discussForm
+                label#discussLabelName
+                    input(placeholder="Ваше имя").input#discussInputName
+                label#discussLabelEmail
+                    input(placeholder="Email").input#discussInputEmail
+                label#discussLabelDescription
+                    textarea(placeholder="Пожалуйста опишите вашу проблему").input#discussInputDescription
 
                 input(type="submit" class="modal__submit" value="отправить" id="discussSubmit")
-                p.success-message Ваша заявка успешно отправлена!
+                p.success-message#discussSuccessMessage Ваша заявка успешно отправлена!

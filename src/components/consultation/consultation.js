@@ -1,12 +1,23 @@
 import './consultation.scss'
 
-const labels = document.querySelectorAll(".consultation form label")
+//const labels = document.querySelectorAll(".consultation form label")
 
-const submitButton = document.querySelector(".consultation form button")
+//const submitButton = document.querySelector(".consultation form button")
 
-submitButton.addEventListener("click", () => {
-    labels.forEach(label => {
-        const input = label.childNodes[1]
+const consultationLabelName = document.getElementById("consultationLabelName")
+const consultationLabelEmail = document.getElementById("consultationLabelEmail")
+
+const consultationInputName = document.getElementById("consultationInputName")
+const consultationInputEmail = document.getElementById("consultationInputEmail")
+
+const consultationButton = document.getElementById("consultationButton")
+
+const labels = [consultationLabelName, consultationLabelEmail]
+const inputs = [consultationInputName, consultationInputEmail]
+
+consultationButton.addEventListener("click", () => {
+    labels.forEach((label, index) => {
+        const input = inputs[index]
         if(input.value === ""){
             label.classList.add("error")
         }
@@ -22,24 +33,20 @@ submitButton.addEventListener("click", () => {
     const isFormValid = !Array
         .from(labels)
         .find(label => label.classList.contains("error"))
-    const getInputOfLabel = label => {
-        return Array
-            .from(label.childNodes)
-            .find(elem => elem.nodeName === "INPUT")
-    }
+
     if(isFormValid){
-        submitButton.disabled = true
-        submitButton.textContent = "идет загрузка..."
+        consultationButton.disabled = true
+        consultationButton.textContent = "идет загрузка..."
         setTimeout(() => {
             console.log({
-                name: getInputOfLabel(labels[0]).value,
-                email: getInputOfLabel(labels[0]).value
+                name: consultationInputName.value,
+                email: consultationInputEmail.value
             })
-            labels.forEach(label => {
-                label.childNodes[1].value = ""
+            labels.forEach((label, index) => {
+                inputs[index].value = ""
             })
-            submitButton.disabled = false
-            submitButton.textContent = "Получить консультацию"
+            consultationButton.disabled = false
+            consultationButton.textContent = "Получить консультацию"
         }, 3000)
     }
 })
