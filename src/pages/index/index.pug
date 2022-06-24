@@ -38,19 +38,19 @@ html(lang="en")
         include ../../components/header/header
         section.banner
             .container
-                img(src="../../assets/images/backgrounds/vector-top.svg" class="background vector-top")
-                img(src="../../assets/images/backgrounds/vector-top-ipad.svg" class="background vector-top-ipad")
-                img(src="../../assets/images/backgrounds/banner-image.svg" class="background banner-image")
-                img(src="../../assets/images/backgrounds/header-polygons.svg" class="background header-polygons")
+                img(src="../../assets/images/backgrounds/vector-top.svg" class="background vector-top" alt="vector")
+                img(src="../../assets/images/backgrounds/vector-top-ipad.svg" class="background vector-top-ipad" alt="vector")
+                img(src="../../assets/images/backgrounds/banner-image.svg" class="background banner-image" alt="vector")
+                img(src="../../assets/images/backgrounds/header-polygons.svg" class="background header-polygons" alt="vector")
                 .title
                     h1 Создаем решения
                     h2 Для роста бизнеса
                     p.col-xl-5.col-lg-6 На основе анализа данных с алгоритмами реализации
                     button.primary#discuss-problem-button Обсудить проблему
                     include ../../components/discussProblem/discussProblem
-                img(src="../../assets/images/backgrounds/vector-middle.svg" class="background vector-middle")
-                img(src="../../assets/images/backgrounds/vector-middle-ipad.svg" class="background vector-middle-ipad")
-                img(src="../../assets/images/backgrounds/arrows.svg" class="background arrows")
+                img(src="../../assets/images/backgrounds/vector-middle.svg" class="background vector-middle" alt="vector")
+                img(src="../../assets/images/backgrounds/vector-middle-ipad.svg" class="background vector-middle-ipad" alt="vector")
+                img(src="../../assets/images/backgrounds/arrows.svg" class="background arrows" alt="vector")
                 .features
                     .row.features-row
                         each item in features
@@ -61,14 +61,14 @@ html(lang="en")
                                         include ../../assets/images/cube.svg
                                     .col-xl-9.col-lg-10.col-md-10.col-8.text= item.text
                             .col-xl-1.col-lg-0.col-md-0
-                img(src="../../assets/images/backgrounds/vector-bottom.svg" class="background vector-bottom")
-                img(src="../../assets/images/backgrounds/vector-bottom-ipad.svg" class="background vector-bottom-ipad")
+                img(src="../../assets/images/backgrounds/vector-bottom.svg" class="background vector-bottom" alt="cube")
+                img(src="../../assets/images/backgrounds/vector-bottom-ipad.svg" class="background vector-bottom-ipad" alt="cube")
                 h3 Услуги
         .decidions#services
             .container
                 .grid
                     each box, index in decidions
                         div(class=`box box-${index+1}`)
-                            img(src=`./assets/images/decidions/${box.img}.svg`)
+                            img(src=`./assets/images/decidions/${box.img}.svg` alt="box")
                             p=box.text
         include ../../components/footer/footer
