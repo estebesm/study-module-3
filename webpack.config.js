@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin")
 
 const fs = require("fs");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -47,6 +48,7 @@ const common = merge([
             filename: "[name].js"
         },
         plugins: [
+            new MiniCssExtractPlugin(),
             new CopyPlugin({
                 patterns: [
                     { from: "src/assets", to: "assets" }

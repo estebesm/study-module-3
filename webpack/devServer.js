@@ -2,7 +2,7 @@ module.exports = function (){
     return {
         mode: "development",
         devServer: {
-            port: 8080
+            port: 5000
         }
     }
 }
