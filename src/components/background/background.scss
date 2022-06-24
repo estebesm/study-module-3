@@ -1,0 +1,39 @@
+
+.backgroundBlock{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  .container{
+    position: relative;
+    .left{
+      position: absolute;
+      top: 98px;
+      left: -10px;
+    }
+  }
+  .right{
+    position: absolute;
+    right: 0;
+    top: 55px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .backgroundBlock{
+    .right{
+      display: none;
+    }
+    .container{
+      .left{
+        top: 200px;
+        left: calc(100% - 150px);
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .backgroundBlock{
+    display: none;
+  }
+}

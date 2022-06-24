@@ -1,6 +1,19 @@
 
-mixin secondaryList(list)
+// -
+//     links = [
+//         {
+//             index: "number",
+//             text: "string",
+//             url: "string"
+//         }
+//     ]
+
+mixin secondaryList(list, links)
+
     ul.secondary__list
-        each item in list.items
+        each item, index in list.items
             li
                 span.description__item=item
+                    if(links)
+                        if(links.find(item => item.index === index))
+                            a(href=links[0].url)= links[0].text

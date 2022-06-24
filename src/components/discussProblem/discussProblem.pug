@@ -1,0 +1,17 @@
+
+.modal__wrapper#discussProblem
+    .dialog__wrapper
+        .dialog#discussProblemDialog
+            button.close#closeDiscuss
+                img(src="./assets/images/header/close.svg" alt="close")
+            h1 Оставьте заявку
+            form
+                label
+                    input(placeholder="Ваше имя").input
+                label
+                    input(placeholder="Email").input
+                label
+                    textarea(placeholder="Пожалуйста опишите вашу проблему").input
+
+                input(type="submit" class="modal__submit" value="отправить" id="discussSubmit")
+                p.success-message Ваша заявка успешно отправлена!

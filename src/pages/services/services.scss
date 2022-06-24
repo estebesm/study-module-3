@@ -23,4 +23,59 @@
     padding: 0 18px;
     margin-bottom: 23px;
   }
+  a{
+    margin-left: 5px;
+    color: #5391DC;
+  }
+}
+
+@media (max-width: 991px) {
+  .services__main{
+
+  }
+  .services__description{
+    p{
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .services__main{
+    h1{
+      font-size: 28px;
+      line-height: 34.13px;
+    }
+    .services__description{
+      h1{
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+  .services__description{
+    h1{
+      margin: 20px 0;
+    }
+    p{
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .services__main{
+    h1{
+      text-align: center;
+    }
+  }
+  .services__description{
+    h1{
+      text-align: center;
+      margin: 20px 0;
+    }
+    p{
+      text-align: center;
+    }
+  }
 }

@@ -10,10 +10,10 @@ html(lang="en")
     body
         -
             features = [
-                "Как найти точки роста и определить цели?",
-                "Как увеличить прибыль, управляя ценами?",
-                "Как избежать проблем на старте нового бизнеса?",
-                "Как не попасть в \"черную дыру\" затрат на продвижение?"
+                {text: "Как найти точки роста и определить цели?", url: "#"},
+                {text: "Как увеличить прибыль, управляя ценами?", url: "#"},
+                {text: "Как избежать проблем на старте нового бизнеса?", url: "#"},
+                {text: "Как не попасть в \"черную дыру\" затрат на продвижение?", url: "#"}
             ]
 
             decidions = [
@@ -46,7 +46,8 @@ html(lang="en")
                     h1 Создаем решения
                     h2 Для роста бизнеса
                     p.col-xl-5.col-lg-6 На основе анализа данных с алгоритмами реализации
-                    button.primary Обсудить проблему
+                    button.primary#discuss-problem-button Обсудить проблему
+                    include ../../components/discussProblem/discussProblem
                 img(src="../../assets/images/backgrounds/vector-middle.svg" class="background vector-middle")
                 img(src="../../assets/images/backgrounds/vector-middle-ipad.svg" class="background vector-middle-ipad")
                 img(src="../../assets/images/backgrounds/arrows.svg" class="background arrows")
@@ -54,11 +55,11 @@ html(lang="en")
                     .row.features-row
                         each item in features
                             .col-xl-1.col-lg-0.col-md-0
-                            .col-xl-4.col-lg-6.col-md-6.col-12.item
+                            a.col-xl-4.col-lg-6.col-md-6.col-12.item(href=item.url)
                                 .row.g-4
                                     .col-xl-3.col-lg-2.col-md-2.col-2.features__cube
                                         include ../../assets/images/cube.svg
-                                    .col-xl-9.col-lg-10.col-md-10.col-8.text= item
+                                    .col-xl-9.col-lg-10.col-md-10.col-8.text= item.text
                             .col-xl-1.col-lg-0.col-md-0
                 img(src="../../assets/images/backgrounds/vector-bottom.svg" class="background vector-bottom")
                 img(src="../../assets/images/backgrounds/vector-bottom-ipad.svg" class="background vector-bottom-ipad")
