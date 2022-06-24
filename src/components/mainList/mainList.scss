@@ -24,3 +24,29 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .main__list{
+    .item{
+      .cube-wrapper{
+        padding-left: 0;
+      }
+      .cube{
+        position: static;
+      }
+      .nowrap{
+        white-space: pre-wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .main__list{
+    .item{
+      .cube{
+        position: static;
+      }
+    }
+  }
+}

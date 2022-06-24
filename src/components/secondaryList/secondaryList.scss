@@ -10,6 +10,9 @@
       font-size: 17px;
     }
   }
+  a{
+    color: #5391DC;
+  }
   li::marker{
     font-size: 35px;
     font-weight: bold;
@@ -23,5 +26,27 @@
     position: relative;
     bottom: 3px;
     left: 2px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .secondary__list{
+    padding-left: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .secondary__list{
+    padding-left: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .secondary__list{
+    padding-left: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .secondary__list{
+    padding-left: 30px;
   }
 }

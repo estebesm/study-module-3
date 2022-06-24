@@ -55,6 +55,11 @@ button.primary{
   padding: 14px 0;
   border-radius: 8px;
   text-transform: uppercase;
+  transition: .2s;
+  &:hover{
+    cursor: pointer;
+    background-color: #30B01E;
+  }
 }
 .container{
   max-width: 1200px;
@@ -93,6 +98,6 @@ button.primary{
 }
 @media (max-width: 575px) {
   .container{
-
+    padding: 0 17px;
   }
 }

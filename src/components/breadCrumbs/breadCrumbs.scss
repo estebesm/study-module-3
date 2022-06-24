@@ -17,3 +17,13 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .breadCrumbs{
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .breadCrumbs{
+    display: none;
+  }
+}
