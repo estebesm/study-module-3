@@ -26,6 +26,7 @@ const PAGES = PAGES_DIRS.map(dir => ({
 
 const res = [];
 
+
 PAGES.forEach(page => page.filenames.forEach(filename => {
     res.push( new HtmlWebpackPlugin({
         template: `${page.path}/${filename}`,

@@ -19,14 +19,21 @@ submitButton.addEventListener("click", () => {
             }
         })
     })
-
-    if(!Array.from(labels).find(label => label.classList.contains("error"))){
+    const isFormValid = !Array
+        .from(labels)
+        .find(label => label.classList.contains("error"))
+    const getInputOfLabel = label => {
+        return Array
+            .from(label.childNodes)
+            .find(elem => elem.nodeName === "INPUT")
+    }
+    if(isFormValid){
         submitButton.disabled = true
         submitButton.textContent = "идет загрузка..."
         setTimeout(() => {
             console.log({
-                name: labels[0].childNodes[1].value,
-                email: labels[1].childNodes[1].value
+                name: getInputOfLabel(labels[0]).value,
+                email: getInputOfLabel(labels[0]).value
             })
             labels.forEach(label => {
                 label.childNodes[1].value = ""

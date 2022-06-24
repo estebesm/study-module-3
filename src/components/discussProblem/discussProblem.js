@@ -10,6 +10,13 @@ const submitButton = document.getElementById("discussSubmit")
 
 const labels = document.querySelectorAll(".modal__wrapper .dialog form label")
 
+
+const getInputOfLabel = label => {
+    return Array
+        .from(label.childNodes)
+        .find(elem => (elem.nodeName === "INPUT" || elem.nodeName === "TEXTAREA"))
+}
+
 function inputListener(e){
     if(e.target.value === ""){
         e.target.parentNode.classList.add("error")
@@ -61,11 +68,14 @@ close.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     validateInputs(labels)
-    if(!Array.from(labels).find(label => label.classList.contains("error"))){
+    const isFormValid = !Array
+        .from(labels)
+        .find(label => label.classList.contains("error"))
+    if(isFormValid){
         const res = {
-            name: labels[0].childNodes[1].value,
-            email: labels[1].childNodes[1].value,
-            description: labels[2].childNodes[1].value,
+            name: getInputOfLabel(labels[0]).value,
+            email: getInputOfLabel(labels[1]).value,
+            description: getInputOfLabel(labels[2]).value,
         }
         submitButton.disabled = true
         submitButton.value = "идет отправка..."
