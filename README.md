@@ -6,7 +6,9 @@
 
 `npm run build`
 
-open ./build/index.html
+before run next command be sure that port 3000 is not in use
+
+`serve`
 
 #DEVELOPMENT
 
