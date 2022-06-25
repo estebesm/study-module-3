@@ -39,6 +39,9 @@ PAGES.forEach(page => page.filenames.forEach(filename => {
 const common = merge([
     {
         mode: "production",
+        optimization: {
+            minimize: false
+        },
         entry: {
             "index": PATHS.source + "/pages/index/index.js",
             "services": PATHS.source + "/pages/services/services.js",

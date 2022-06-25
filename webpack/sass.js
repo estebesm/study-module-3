@@ -8,9 +8,26 @@ module.exports = function(paths) {
                     test: /\.scss$/,
                     include: paths,
                     use: [
-                        MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'sass-loader'
+                        {
+                            loader: MiniCssExtractPlugin.loader
+                        },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true,
+                                sassOptions: {
+                                    minimize: false,
+                                    outputStyle: 'expanded'
+                                }
+
+                            }
+                        }
                     ]
                 }
             ]
