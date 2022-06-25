@@ -6,6 +6,8 @@
 
 `npm run build`
 
+open ./build
+
 before run next command be sure that port 3000 is not in use
 
 `serve`
