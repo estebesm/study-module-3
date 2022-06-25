@@ -31,7 +31,8 @@ PAGES.forEach(page => page.filenames.forEach(filename => {
     res.push( new HtmlWebpackPlugin({
         chunks: [filename.substring(0, filename.length-4)],
         filename: `${filename.replace(/\.pug/, '.html')}`,
-        template: `${page.path}/${filename}`
+        template: `${page.path}/${filename}`,
+        minify: false
     }));
 }));
 
@@ -49,7 +50,9 @@ const common = merge([
             filename: "[name].js"
         },
         plugins: [
-            new MiniCssExtractPlugin(),
+            new MiniCssExtractPlugin({
+
+            }),
             new CopyPlugin({
                 patterns: [
                     { from: "src/assets", to: "assets" }
