@@ -3,6 +3,7 @@
 #PRODUCTION
 
 `npm install`
+
 `npm run build`
 
 open ./build/index.html
